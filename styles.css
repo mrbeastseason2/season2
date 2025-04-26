@@ -1,0 +1,456 @@
+/* Global styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+   background: #333;
+   color: #fff;
+  line-height: 1.6;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Navbar Section */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #111;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .logo h1 {
+  font-size: 2rem;
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+.navbar .logo a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .logo a:hover {
+   color: #00e0ff;
+   transform: scale(1.1);
+}
+
+.navbar .nav-links a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 1rem;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #00e0ff;
+  transform: scale(1.1);
+
+}
+
+.theme-toggle-btn {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/mrbeast.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+    color: #fff;
+
+}
+.hero h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 4rem;
+  color: #fff;
+  text-shadow: 2px 2px 10px #000;
+}
+.subtitle {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+.cta-buttons {
+  margin-top: 1.5rem;
+}
+.btn {
+  background: #00e0ff;
+  color: #000;
+  padding: 0.8rem 2rem;
+  margin: 0 0.5rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: transform 0.2s ease;
+}
+.btn:hover {
+  transform: scale(1.05);
+}
+.btn-outline {
+  background: transparent;
+  border: 2px solid #00e0ff;
+  color: #00e0ff;
+}
+
+/* Countdown Section */
+.countdown-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #222;
+}
+.countdown {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+
+/* Stats Section */
+.stats-section {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background: #000;
+}
+.stat-card {
+  background: #1f1f1f;
+  padding: 2rem;
+  border-radius: 15px;
+  width: 180px;
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+.stat-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Trailer Section */
+.trailer-section {
+  padding: 4rem 1rem;
+  text-align: center;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Footer */
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background: #111;
+  color: #fff;
+}
+
+body.dark-mode .hero {
+  background: url('images/mrbeast.png') no-repeat center center/cover;
+  color: #fff;
+}
+
+body.dark-mode .cta-buttons .btn {
+  background: #00e0ff;
+  color: #000;
+}
+
+body.dark-mode .footer {
+  background: #333;
+  color: #ccc;
+}
+
+/* Button Styles for Light and Dark Modes */
+.theme-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1000;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Apply transition effect to the toggle button */
+body.dark-mode .theme-toggle-btn {
+  color: #000;
+  transform: rotate(360deg); /* Optional - adds a subtle rotation effect when toggling */
+}
+
+/* Optional smooth color change on toggle */
+body.dark-mode .theme-toggle-btn {
+  transition: color 0.5s ease-in-out;
+}
+
+/* Animations */
+@keyframes slide-in {
+  from { transform: translateY(-40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes pop {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-slide-in {
+  animation: slide-in 1s ease-out forwards;
+}
+.animate-fade-in {
+  animation: fade-in 1.5s ease-in forwards;
+}
+.animate-pop {
+  animation: pop 0.8s ease-out forwards;
+}
+.delay-1 {
+  animation-delay: 0.2s;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+}
+
+/* About Page Styles */
+.about-section {
+  padding: 3rem 1rem;
+  background: #222;
+  text-align: center;
+}
+.about-list {
+  list-style: none;
+  padding: 1.5rem 0;
+  font-size: 1.2rem;
+}
+.about-list li {
+  margin-bottom: 1rem;
+}
+.about-section p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+  color: #bbb;
+}
+.how-it-works {
+  background: #333;
+  padding: 3rem 1rem;
+}
+.how-it-works ol {
+  list-style-type: decimal;
+  padding-left: 2rem;
+  text-align: left;
+  font-size: 1.1rem;
+}
+.how-it-works li {
+  margin: 1rem 0;
+}
+.creator-message {
+  padding: 3rem 1rem;
+  background: #444;
+  color: #bbb;
+}
+.creator-message p {
+  font-size: 1.2rem;
+}
+.creator-message strong {
+  color: #00e0ff;
+}
+
+/* Apply Now Page Styles */
+.apply-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background: #222;
+}
+.apply-list {
+  list-style: none;
+  padding: 1.5rem 0;
+  font-size: 1.2rem;
+}
+.apply-list li {
+  margin-bottom: 1rem;
+}
+.application-form {
+  padding: 2rem 1rem;
+  background: #333;
+  color: #bbb;
+}
+.application-form label {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+.application-form input {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1.5rem;
+  background: #444;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+}
+.application-form button {
+  background: #00e0ff;
+  color: #000;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  font-weight: bold;
+  border: none;
+  transition: transform 0.2s ease;
+}
+.application-form button:hover {
+  transform: scale(1.05);
+}
+.next-steps {
+  padding: 3rem 1rem;
+  background: #444;
+  color: #bbb;
+}
+.next-steps p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.contact_message {
+    background-color: #172E57;
+    color: white;
+    padding: 10px 20px;
+    font-size: 26px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    transition: 0.5s;
+    border-radius: 5px;
+    max-width: 400px;
+    height: 200px;
+    text-align: center;
+    margin: 20px auto;
+    display: none;
+}
+
+.contact_message img {
+    width: 100px;
+    display: block; /* To make sure the image is block-level and centered */
+    margin: 0 auto;
+}
+
+/* Responsive Styles */
+
+/* Mobile-first */
+@media screen and (max-width: 768px) {
+  /* Hero Section */
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  .cta-buttons {
+    flex-direction: column;
+  }
+  .btn {
+    margin-bottom: 1rem;
+  }
+
+  /* Stats Section */
+  .stats-section {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  .stat-card {
+    width: 100%;
+  }
+
+  /* Apply Form */
+  .application-form {
+    padding: 2rem 1rem;
+  }
+
+  /* Countdown Section */
+  .countdown-section {
+    padding: 2rem 1rem;
+  }
+
+  /* About Section */
+  .about-section, .how-it-works, .creator-message {
+    padding: 2rem 1rem;
+  }
+
+  /* Trailer Section */
+  .video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  /* Stats Section */
+  .stats-section {
+    gap: 1.5rem;
+  }
+
+  .stat-card {
+    width: 250px;
+  }
+
+  /* Apply Form */
+  .application-form input {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .application-form button {
+    width: 80%;
+  }
+}
+
+/* Large screens */
+@media screen and (min-width: 1200px) {
+  /* Hero Section */
+  .hero h1 {
+    font-size: 5rem;
+  }
+  .subtitle {
+    font-size: 1.8rem;
+  }
+
+  .cta-buttons {
+    flex-direction: row;
+  }
+}

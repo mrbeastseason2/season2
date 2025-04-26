@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apply Now - MrBeast Challenge Season 2</title>
+  <link rel="stylesheet" href="styles.css"/>
+   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+</head>
+<body>
+
+   <!-- Navbar Section -->
+  <nav class="navbar">
+    <div class="logo">
+      <a href="index.html"><h1>MrBeast Challenge</h1></a>
+    </div>
+    <div class="nav-links">
+      <a href="about.html">About</a>
+      <a href="apply.html">Apply</a>
+      <a href=""><button id="theme-toggle" class="theme-toggle-btn">🌙</button></a>
+    </div>
+  </nav>
+  <header class="hero">
+    <div class="container">
+      <h1 class="animate-slide-in">Think You’ve Got What It Takes?</h1>
+      <p class="subtitle animate-fade-in">Submit your audition and join the wildest competition on the internet.</p>
+    </div>
+  </header>
+
+  <section class="apply-section">
+    <h2>Who Can Apply?</h2>
+    <ul class="apply-list">
+      <li>✅ 18 years or older</li>
+      <li>✅ Be available for filming (Dates: TBD)</li>
+      <li>✅ Be able to travel to the filming location</li>
+      <li>✅ Be comfortable on camera and ready for intense challenges</li>
+      <li>✅ Not be boring 😎</li>
+    </ul>
+  </section>
+
+ <section class="application-form">
+  <h2>Submit Your Audition Video</h2>
+  <p>Record a short video (1–2 minutes max) telling us why you're the perfect fit for MrBeast Challenge Season 2!</p>
+
+  <div id="form_container">
+    <form id="applicationForm">
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" name="full-name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="age">Age</label>
+      <input type="number" id="age" name="age" required />
+
+      <label for="city">City & Country</label>
+      <input type="text" id="city" name="city" required />
+
+      <label for="social-media">Social Media Handles (Optional)</label>
+      <input type="text" id="social-media" name="social-media" />
+
+      <!-- Replacing file upload with a link input -->
+      <label for="video-link">Link to Audition Video</label>
+      <input type="url" id="video-link" name="video-link" required />
+
+      <button type="submit" class="btn">Submit Your Application</button>
+    </form>
+  </div>
+
+  <p class="contact_message" id="contact-message" style="display:none;">
+    <img src="images/mrbeastlogo.png" alt="Success">
+    <span>Application Successfully Sent</span>
+  </p>
+</section>
+
+
+  <section class="next-steps">
+    <h2>What Happens Next?</h2>
+    <p>If selected, we'll reach out for an interview and more details. Make sure to check your emails!</p>
+  </section>
+
+  <footer class="footer">
+    <p>© 2025 MrBeast Challenge. All rights reserved.</p>
+  </footer>
+
+  <script
+  type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+
+   <script src="script.js">
+  
+  </script>
+</body>
+</html>
